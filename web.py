@@ -194,6 +194,11 @@ def post_del(id):
     return redirect(url_for('posts'))
 
 
+@app.route('/about', methods=['GET'])
+def about():
+    return render_template('about.html', meta_title = 'About')
+
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     error = False
